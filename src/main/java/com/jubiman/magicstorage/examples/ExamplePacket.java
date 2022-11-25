@@ -1,4 +1,4 @@
-package examplemod.examples;
+package com.jubiman.magicstorage.examples;
 
 import necesse.engine.network.NetworkPacket;
 import necesse.engine.network.Packet;

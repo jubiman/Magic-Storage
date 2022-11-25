@@ -1,4 +1,4 @@
-package examplemod.examples;
+package com.jubiman.magicstorage.object;
 
 import necesse.engine.tickManager.TickManager;
 import necesse.entity.mobs.PlayerMob;
@@ -16,23 +16,21 @@ import necesse.level.maps.light.GameLight;
 import java.awt.*;
 import java.util.List;
 
-public class ExampleObject extends GameObject {
+public class CraftingAccess extends GameObject {
 
     private GameTexture texture;
 
-    public ExampleObject() {
+    public CraftingAccess() {
         super(new Rectangle(4, 4, 26, 26)); // Collision relative to the tile it's placed on
-        // Remember that tiles are 32x32 pixels in size
-        hoverHitbox = new Rectangle(0, -32, 32, 64); // 2 tiles high mouse hover hitbox
-        toolType = ToolType.ALL; // Can be broken by all tools
-        isLightTransparent = true; // Lets light pass through
+        //hoverHitbox = new Rectangle(0, -32, 32, 32);
+        toolType = ToolType.ALL;
         mapColor = new Color(31, 150, 148); // Also applies as debris color if not set
     }
 
     @Override
     public void loadTextures() {
         super.loadTextures();
-        texture = GameTexture.fromFile("objects/exampleobject");
+        texture = GameTexture.fromFile("objects/craftingaccess");
     }
 
     @Override
